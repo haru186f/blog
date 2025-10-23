@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haru's blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haru's blog</title>
 </head>
     <body>
         <div>
             <h1><a href="/">Django Girls Blog</a></h1>
         </div>
 
+        {% for post in posts %}
         <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. こんにちは！ よろしくお願いします！ </p>
+            <p>published</p>
+            <h2><a href="">{{ post.published_date }}</a></h2>
+            <p>{{ post.text | linebreaksbr }}</p>
         </div>
-
-        <div>
-            <p>公開日: 2014/06/14, 12:14</p>
-            <h2><a href="">2番目の投稿</a></h2>
-            <p> こんにちは！ よろしくお願いします！ </p>
-        </div>
+        {% endfor %}
     </body>
 </html>

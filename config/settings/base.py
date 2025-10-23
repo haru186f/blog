@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # 開発アプリはここに追加
+    'django_extensions',
     'apps.blog',
 ]
 
